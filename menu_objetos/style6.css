@@ -1,0 +1,690 @@
+body{
+    margin: 0;
+    background-image: url('imagenes/p2njo924lmz91.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    backdrop-filter:brightness(70%);
+    
+}
+body #conteiner {
+    position: relative;
+    font-family: "Josefin Slab", serif;
+    color: white;
+    z-index: 2;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+.box{
+    height: 10px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    margin-right: 10px;
+}
+.box:hover input{
+    width: 150px;
+}
+.box input{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+.box a .fas{
+    color: goldenrod;
+    font-size: 14px;
+}
+#big_box{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    border: 1px solid goldenrod;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+#cosasdarriba{ 
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+#cosas{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.font_1{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    border-top: 1px, solid, goldenrod;
+    line-height: 35px;
+}
+.font_2{
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin-top: 5px;
+    line-height: 35px;
+}
+#logo_head{
+    width: 80px;
+    height: 80px;
+}
+#cositas{
+    border: none;
+    margin: 0;
+    padding: 0;
+    height: 25px;
+    width: 150px;
+    border-radius: 20px;
+    background: rgb(218, 165, 32);
+}
+#big_box{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    border: 1px solid goldenrod;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+#box_1{
+    display: flex;
+    flex-direction: column;
+}
+#info{
+    margin: 10px 5% 10px 5%;
+    border-bottom: 2px solid #fff;
+}
+#info_2{
+    margin: 10px 5% 10px 5%;
+}
+#list_info{
+    display: flex;
+    margin: 10px 5% 50px 5%;
+    align-items: center;
+}
+#list_info_text{
+    width: 700px;
+}
+#list_info_img{
+    width: 300px;
+    height: 300px;
+}
+#info::after{
+    display: block;
+    width: 80px;
+    height: 2px;
+    margin-bottom: -2px;
+    content: "";
+    background-color: goldenrod;
+}
+.info_interior{
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+}
+
+.info_interior2{
+    margin: 0px 5% 10px 5%;
+}
+
+.secciones{ 
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(min-width:631px){
+    .seccion{
+        color: goldenrod;
+        margin: 0;
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 35px;
+    }
+    #cositas{
+        display: none;
+    }
+    .info_interior{
+        margin: 0px 5% 20px 5%;
+        border-bottom: 1px solid #fff;
+    }
+}
+@media(max-width:500px){
+    #logo{
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+    }
+    header{
+        background-color: black;
+        height: 70px;
+    }
+}
+@media(min-width:501px){
+    #logo{
+        height: 80px;
+        width: 80px;
+        margin-left: 10px;
+    }
+    header{
+        background-color: black;
+        height: 100px;
+    }
+    
+}
+@media(max-width:470px){
+    #list_info_photo{
+        display: none;
+    }
+}
+@media(max-width:630px){
+    .seccion{
+        display: none;
+    }
+    .info_interior{
+        margin: 0px 3% 20px 3%;
+        border-bottom: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media(max-width:650px){
+    .ponesacosahorrorosaahi{
+        display: flex;
+        border-bottom: 1px solid goldenrod;
+        height: 200px;
+    }
+    #cosinhas{
+        display: flex;
+        border-bottom: 1px solid goldenrod;
+    }
+    #box_2{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 10px;
+        border: 1px solid goldenrod;
+
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow-x: scroll;
+    }
+}
+@media(min-width:651px){
+    #cosinhas{
+        display: flex;
+
+        border-bottom: 1px solid goldenrod;
+    }
+    .ponesacosahorrorosaahi{
+        display: flex;
+        border-bottom: 1px solid goldenrod;
+        height: 200px;
+        align-items: center;
+    }
+    #box_2{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 10px;
+        border: 1px solid goldenrod;
+        overflow-x: scroll;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+*{
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 35px;
+    margin: 0;
+}
+
+.foton{
+    width: 80px;
+    height: 90px;
+
+}
+.font_11{
+    font-family: "Josefin Slab", serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1;
+    text-align: center;
+    margin: 0;
+}
+@media(min-width:1031px){
+
+    #box_2{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 10px;
+        border: 1px solid goldenrod;
+        overflow-x: hidden;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .fotonacita{
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        width: 15.84%;
+    }
+    .fotaza{
+        display: flex;
+        color: #fff;
+        text-decoration: none;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        width: 15.84%;
+    }
+    .font_4{
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1;
+        width: 15.84%;
+        text-align: center;
+        margin: 0;
+    }
+    .parte_tabla1{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid goldenrod;
+        width: 13.22%; 
+    }
+    .parte_tabla2{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid goldenrod;
+        width: 7.045%; 
+    }
+    .parte_tabla3{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid goldenrod;
+        width: 7.045%; 
+    }
+    .parte_tabla4{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid goldenrod;
+        width: 25.19%; 
+    }
+    .parte_tabla5{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid goldenrod;
+        width: 21.13%; 
+    }
+    .parte_tabla6{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid goldenrod;
+        width: 10.61%; 
+    }
+    .font_5{
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1;
+
+
+        margin: 0;
+        width: 13.22%; 
+        text-align: center;
+    }
+    .font_6{
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1;
+   
+
+        margin: 0;
+        width: 7.045%; 
+        text-align: center
+    }
+
+    .font_7{
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1;
+
+        margin: 0;
+        width: 7.045%; text-align: center;
+    }
+    .font_8{
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1;
+
+        margin: 0;
+        width: 25.19%; 
+        text-align: center;
+    }
+    .font_9{
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1;
+
+        margin: 0;
+        width: 21.13%; 
+        text-align: center;
+    }
+    .font_10{
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1;
+
+        margin: 0;
+        width: 10.61%; text-align: center;
+    }
+    .fotonaza{
+        padding-right: 10%;
+        width: 80px;
+        height: 90px;
+
+    }
+    .fotonacitaL{
+        width: 100%;
+        text-decoration: none;
+        color:#fff;
+        display: flex;
+        align-items: center;
+    }
+    .fotazaL{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid goldenrod;
+    }
+    .font_12{
+        white-space: nowrap;
+
+        font-family: "Josefin Slab", serif;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1;
+        text-align: center;
+        margin: 0;
+        padding-bottom: 34px;
+        padding-top:34px;
+        padding-right:200px;
+        padding-left:10%;
+    }
+}
+@media(min-width:756px){
+    .fotonaza{
+        padding-right: 10%;
+        width: 80px;
+        height: 90px;
+
+    }
+    .fotonacitaL{
+        width: 100%;
+        text-decoration: none;
+        color:#fff;
+        display: flex;
+        align-items: center;
+    }
+    .fotazaL{
+        
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid goldenrod;
+    }
+    .font_12{
+        white-space: nowrap;
+
+        font-family: "Josefin Slab", serif;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1;
+        text-align: center;
+        margin: 0;
+        padding-bottom: 34px;
+        padding-top:34px;
+        padding-right:200px;
+        padding-left:10%;
+    }
+}
+@media(max-width:755px){
+    .fotonacitaL{
+        width: 100%;
+        text-decoration: none;
+        color:#fff;
+        display: flex;
+        align-items: center;
+    }
+    .fotazaL{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        
+    }
+    .fotonaza{
+        padding-right: 10%;
+        width: 80px;
+        height: 90px;
+        border-bottom: 1px solid goldenrod;
+    }
+    .font_12{
+        white-space: nowrap;
+        border-bottom: 1px solid goldenrod;
+        font-family: "Josefin Slab", serif;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1;
+        text-align: center;
+        margin: 0;
+        padding-bottom: 34px;
+        padding-top:34px;
+        padding-right:200px;
+        padding-left:10%;
+    }
+}
+@media(max-width:1030px){
+    .fotonacita{
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        color: #fff;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        text-decoration: none;
+        width: 129px; 
+    }
+    .fotaza{
+        display: flex;
+        color: #fff;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        text-decoration: none;
+        width: 129px; 
+    }
+
+    .font_4{
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1;
+        width: 129px;
+        text-align: center;
+        margin: 0;
+    }
+    .parte_tabla1{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid goldenrod;
+        width: 108px; 
+    }
+    .parte_tabla2{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid goldenrod;
+        width: 33px; 
+    }
+    .parte_tabla3{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid goldenrod;
+        width: 33px; 
+    }
+    .parte_tabla4{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid goldenrod;
+        width: 244px; 
+    }
+    .parte_tabla5{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid goldenrod;
+        width: 168px; 
+    }
+    .parte_tabla6{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid goldenrod;
+        width: 84px; 
+    }
+    .font_5{
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1;
+
+        margin: 0;
+        width: 108px; 
+        text-align: center;
+    }
+    .font_6{
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1;
+
+        margin: 0;
+        width: 33px; 
+        text-align: center
+    }
+
+    .font_7{
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1;
+
+        margin: 0;
+        width: 33px; text-align: center;
+    }
+    .font_8{
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1;
+
+        margin: 0;
+        width: 244px; 
+        text-align: center;
+    }
+    .font_9{
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1;
+
+        margin: 0;
+        width: 168px; 
+        text-align: center;
+    }
+    .font_10{
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1;
+
+        margin: 0;
+        width: 84px; text-align: center;
+    }
+}
+
+
+
+.listaza{
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+
+}

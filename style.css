@@ -1,0 +1,335 @@
+body{
+    margin: 0;
+    background-image: url('imagenes/p2njo924lmz91.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    backdrop-filter:brightness(70%);
+    
+}
+/* Contenedor de la animación */
+#animation-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    background: rgba(0, 0, 0, 1); /* Fondo completamente blanco */
+    background-attachment: fixed;
+    z-index: 9999;
+
+
+    animation: fadeOut 3s;
+  }
+   
+  /* Estilos del logo */
+  #animation-logo {
+    margin: auto;
+    position:absolute;
+    width: 800px; /* Tamaño del logo más grande */
+    height: auto;
+    
+  }
+   
+  /* Animación del logo */
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+      visibility: hidden;
+    }
+  }
+   
+  /* Animación para ocultar el contenedor */
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    80% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.2);
+      visibility: hidden;
+    }
+  }
+   
+  /* Bloquear el scroll mientras la animación está activa */
+  body.no-scroll {
+    overflow: hidden;
+  }
+   
+  /* Transición para el contenido principal */
+  main {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+   
+  /* Cuando la animación ha terminado, mostramos el contenido principal */
+  body.loaded main {
+    opacity: 1;
+  }
+body #conteiner {
+    position: relative;
+    color: white;
+    z-index: 2;
+}
+
+@media(min-width:631px){
+    #sinopsis{
+        display: flex;
+        align-items: center;
+        margin: 10px 5% 0px 5%;
+    }
+    #darksoulsremaster{
+        margin: 0px 10px 0px 10px;
+    }
+    .seccion{
+        color: goldenrod;
+        margin: 0;
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 35px;
+    }
+    #cositas{
+        display: none;
+    }
+    #foto{
+        display: flex;
+        justify-content: center;
+        margin: 0px 5% 0px 5% ;
+    }
+    #req{
+        display: flex;
+        margin: 10px 5px 5px;
+        justify-content: space-around;
+    }
+    #miya{
+        width: 500px;
+        height: 400px;
+    }
+    #anorlondo{
+        height: 200px;
+        width: 350px;
+    }
+    #logo{
+        height: 100px;
+        width: 100px;
+        margin-left: 10px;
+    }
+}
+@media(max-width:500px){
+    #miya{
+        width: 250px;
+        height: 150px;
+    }
+    #anorlondo{
+        height: 150px;
+        width: 250px;
+    }
+    #logo{
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+    }
+    header{
+        background-color: black;
+        height: 70px;
+    }
+}
+@media(min-width:501px){
+    #miya{
+        width: 400px;
+        height: 300px;
+    }
+    #anorlondo{
+        height: 200px;
+        width: 350px;
+    }
+    #logo{
+        height: 80px;
+        width: 80px;
+        margin-left: 10px;
+    }
+    header{
+        background-color: black;
+        height: 100px;
+    }
+}
+@media(max-width:630px){
+    #sinopsis{
+        margin: 5% 5% 0px 5%;
+        display: flex;
+        flex-direction: column;
+    }
+    #darksoulsremaster{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 10px;
+    }
+    #foto{
+        display: flex;
+        justify-content: center;
+    }
+    .seccion{
+        display: none;
+    }
+    #req{
+        display: flex;
+        margin: 10px 5% 0px 5%;
+        justify-content: space-between;
+    }
+
+}
+#historia{
+    padding: 10px 5% 10px 5%;
+    border-top: 1px solid goldenrod;
+}
+#descripcion{
+    margin: 10px 5% 0px 5%;
+}
+#cosas_de_abajo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titulo{
+    margin: 0px 0px 10px 0px;
+}
+#cosas{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+#cosasdarriba{ 
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.secciones{ 
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#cositas{
+    border: none;
+    margin: 0;
+    padding: 0;
+    height: 25px;
+    width: 150px;
+    border-radius: 20px;
+    background: rgb(218, 165, 32);
+}
+.box{
+    height: 10px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    margin-right: 10px;
+}
+.box:hover input{
+    width: 150px;
+}
+.box input{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+.box a .fas{
+    color: goldenrod;
+    font-size: 14px;
+}
+#big_box{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    border: 1px solid goldenrod;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+#box_1{
+    display: flex;
+    flex-direction: column;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+#info{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid goldenrod;
+    border-bottom: 1px solid goldenrod;
+}
+#iconos{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.font_1{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+.redirect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+.img_block{
+    width: 120px;
+    height: 120px;
+}
+
+.font_2{
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    margin-top: 5px;
+}
+.font_3{
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 1pxs;
+}
+#texto{
+    margin: 10px 5% 0px 5%;
+}
+#fotasa{
+    margin: 10px 5% 0px 5%;
+}
+#resumen{
+    margin: 10px 5% 0px 5%;
+}
+#minmax{
+    margin-left: 10px;
+}
