@@ -1,0 +1,279 @@
+body{
+    margin: 0;
+    background-image: url('../imagenes/p2njo924lmz91.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    backdrop-filter:brightness(70%);
+    
+}
+h1, h2, h3, h4, h5{
+    margin: 0;
+}
+header{
+    background-color: black;
+    height: 70px;
+}
+.secciones{ 
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+@media(min-width:631px){
+    .seccion{
+        color: goldenrod;
+        margin: 0;
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 35px;
+    }
+    #cositas{
+        display: none;
+    }
+}
+@media(max-width:630px){
+    .seccion{
+        display: none;
+    }
+    #box_1{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+@media(max-width:500px){
+    #logo{
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+    }
+    header{
+        background-color: black;
+        height: 70px;
+    }
+}
+@media(min-width:501px){
+    #logo{
+        height: 80px;
+        width: 80px;
+        margin-left: 10px;
+    }
+    header{
+        background-color: black;
+        height: 100px;
+    }
+    
+}
+@media(max-width:480px){
+    #desc {
+        display: flex;
+        margin: 10px 5% 10px 5%;
+        border: 1px solid #fff;
+        width: 300px;
+        background-color: #000;
+        flex-direction: column;
+    }
+}
+@media(min-width:481px){
+    #desc {
+        display: flex;
+        margin: 10px 5% 10px 5%;
+        border: 1px solid #fff;
+        width: 400px;
+        background-color: #000;
+        flex-direction: column;
+    }
+}
+@media(max-width:880px){
+    #sub_big_box{
+        display: flex;
+        align-items: stretch;
+        flex-direction: column-reverse;
+    }
+}
+@media(min-width:881px){
+    #sub_big_box{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+.box{
+    height: 10px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    margin-right: 10px;
+}
+.box:hover input{
+    width: 150px;
+}
+.box input{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+.box a .fas{
+    color: goldenrod;
+    font-size: 14px;
+}
+#cositas{
+    border: none;
+    margin: 0;
+    padding: 0;
+    height: 25px;
+    width: 150px;
+    border-radius: 20px;
+    background: rgb(218, 165, 32);
+}
+#cosas{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+#info{
+    margin: 10px 5% 10px 5%;
+    border-bottom: 2px solid #fff;
+}
+#info::after{
+    display: block;
+    width: 80px;
+    height: 2px;
+    margin-bottom: -2px;
+    content: "";
+    background-color: goldenrod;
+}
+#cosasdarriba{ 
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+body #conteiner {
+    position: relative;
+    color: white;
+    z-index: 2;
+}
+
+#big_box{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    border: 1px solid goldenrod;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#box_1{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 5% 10px 5%;
+}
+#box_2{
+    margin: 10px 3% 10px 3%;
+}
+#item_box{
+    display: flex;
+    width: 275px;
+    margin-left: 10px;
+    margin-right: 5%;
+    margin-top: 10px;
+    border: 1px solid goldenrod;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+.text_box{
+    margin: 10px 5% 10px 5%;
+}
+.title_box{
+    padding: 10px 5% 10px 5%;
+}
+
+.font_1{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+.font_2{
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    margin-top: 5px;
+}
+.font_3{
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing:auto;
+    font-weight: 600;
+    font-style:italic;
+    margin-bottom: 1pxs;
+}
+.table_row{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+#table tbody{
+    width: 100%;
+}
+#table th{
+    width: 100%;
+    padding: 10px;
+}
+#table td{
+    border: 1px solid goldenrod;
+    border-left: 0px;
+    border-bottom: 0px;
+    padding: 5px;
+}
+#table h3, h2{
+    margin: 0;
+}
+
+.table_row1{
+    width: 275px;
+    display: flex;
+    justify-content: center;
+}
+
+.img_esc{
+    width: 58.75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.esc{
+    display: flex;
+    width: 58.75px;
+    height: 22px;
+    align-items: center;
+    justify-content: center;
+}
+#table{
+    display: flex;
+    width: 275px;
+    background-color: #000;
+}
+.table_row2{
+    display: flex;
+}
+.desc_text{
+    padding: 10px 5% 20px 5%;
+    width: 90%;
+}
+.desc_title_box{
+    padding: 10px 5% 10px 5%;
+    border-top:1px solid #fff;
+    width: 90%;
+}
