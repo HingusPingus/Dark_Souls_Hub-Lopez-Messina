@@ -8,42 +8,46 @@
     $conexion = mysqli_connect($server_name, $user, $password, $database_name);
 
     $tipo=$_GET["tipo"];
+
     $query="select titulo, categorias.descripcion from categorias join secciones on categorias_codigo=categorias.codigo where secciones.codigo=$tipo";
     $query2="select nombre, descripcion from secciones where codigo=$tipo";
     $query3="select categorias_codigo from secciones where codigo=$tipo";
-    $query4="select * from armas";
-    $query5="select * from armadura";
-    $query6="select * from arcos";
-    $query7="select * from escudos";
-    $query8="select * from anillos";
-    $query9="select * from catalizadores";
-    $query10="select objetos.* from objetos join obj_tipo on codigo_obj_tipo=obj_tipo.codigo where obj_tipo.codigo=2";
-    $query11="select objetos.* from objetos join obj_tipo on codigo_obj_tipo=obj_tipo.codigo where obj_tipo.codigo=1";
-    $query12="select objetos.* from objetos join obj_tipo on codigo_obj_tipo=obj_tipo.codigo where obj_tipo.codigo=3";
-    $query13="select objetos.* from objetos join obj_tipo on codigo_obj_tipo=obj_tipo.codigo where obj_tipo.codigo=4";
-    $query14="select * from magias where tipo='Hechizo'";
-    $query15="select * from magias where tipo='Piromancia'";
-    $query16="select * from magias where tipo='Milagro'";
-    $query17="select * from zona where parte='e'";
-    $query18="select * from zona where parte='m'";
-    $query19="select * from zona where parte='l'";
-    $query20="select * from zona where parte='o'";
-    $res20=mysqli_query($conexion, $query20);
-    $res19=mysqli_query($conexion, $query19);
-    $res18=mysqli_query($conexion, $query18);
-    $res17=mysqli_query($conexion, $query17);
-    $res16=mysqli_query($conexion, $query16);
-    $res15=mysqli_query($conexion, $query15);
-    $res14=mysqli_query($conexion, $query14);
-    $res13=mysqli_query($conexion, $query13);
-    $res12=mysqli_query($conexion, $query12);
-    $res11=mysqli_query($conexion, $query11);
-    $res10=mysqli_query($conexion, $query10);
-    $res9=mysqli_query($conexion, $query9);
-    $res8=mysqli_query($conexion, $query8);
-    $res7=mysqli_query($conexion, $query7);
-    $res6=mysqli_query($conexion, $query6);
-    $res5=mysqli_query($conexion, $query5);
+    switch($tipo){
+        case 17:
+        $query4="select * from armas";
+        case 18:
+        $query4="select * from armadura";
+        case 20:
+        $query4="select * from arcos";
+        case 19:
+        $query4="select * from escudos";
+        case 21:
+        $query4="select * from anillos";
+        case 22:
+        $query4="select * from catalizadores";
+        case 5:
+        $query4="select objetos.* from objetos join obj_tipo on codigo_obj_tipo=obj_tipo.codigo where obj_tipo.codigo=2";
+        case 6:
+        $query4="select objetos.* from objetos join obj_tipo on codigo_obj_tipo=obj_tipo.codigo where obj_tipo.codigo=1";
+        case 7:
+        $query4="select objetos.* from objetos join obj_tipo on codigo_obj_tipo=obj_tipo.codigo where obj_tipo.codigo=3";
+        case 8:
+        $query4="select objetos.* from objetos join obj_tipo on codigo_obj_tipo=obj_tipo.codigo where obj_tipo.codigo=4";
+        case 9:
+        $query4="select * from magias where tipo='Hechizo'";
+        case 10:
+        $query4="select * from magias where tipo='Piromancia'";
+        case 11:
+        $query4="select * from magias where tipo='Milagro'";
+        case 13:
+        $query4="select * from zona where parte='e'";
+        case 14:
+        $query4="select * from zona where parte='m'";
+        case 15:
+        $query4="select * from zona where parte='l'";
+        case 16:
+        $query4="select * from zona where parte='o'";
+    }
     $res=mysqli_query($conexion, $query);
     $res2=mysqli_query($conexion, $query2);
     $res3=mysqli_query($conexion, $query3);
@@ -51,7 +55,7 @@
     $nombre_sec=mysqli_fetch_assoc($res);
     $sec=mysqli_fetch_assoc($res2);
     $cat=mysqli_fetch_assoc($res3);
-    
+
 ?>
 <html lang="en">
 <head>
@@ -124,8 +128,8 @@
                     </div>
                 </div>
                 <div id="box_2">
-                    
-                    <?php if($tipo==17){?>
+                    <?php switch($tipo){
+                        case 17:?>
                     <table style="width: 100%;">
                         <tr id="cosinhas">
                                 <th class="font_4" >Icono</th>
@@ -166,8 +170,8 @@
                                 <h4 class="font_11"><?php echo $fila["tipo"]?></h4>
                             </td>
                         </tr>
-                            <?php }}
-                        else if($tipo==18){?>
+                            <?php }
+                        case 18?>
                         <table style="width: 100%;">
                             <tr id="cosinhas">
                                 <th class="font_4" >Icono</th>
@@ -179,7 +183,7 @@
                                 <th class="font_10" style="border-left: 1px solid goldenrod;">Tipo</th>
                             
                         </tr>
-                        <?php while($fila1=mysqli_fetch_assoc($res5)){?>
+                        <?php while($fila1=mysqli_fetch_assoc($res4)){?>
                         <tr class="ponesacosahorrorosaahi">
                             
                             <td class="fotaza">
@@ -207,8 +211,8 @@
                                 <h4 class="font_11"><?php echo $fila1["tipo"]?></h4>
                             </td>
                         </tr>
-                            <?php }}
-                        else if($tipo==20){?>
+                            <?php }
+                        case 20?>
                     <table style="width: 100%;">
                         <tr id="cosinhas">
                                 <th class="font_4" >Icono</th>
@@ -220,7 +224,7 @@
                                 <th class="font_10" style="border-left: 1px solid goldenrod;">Tipo</th>
                             
                         </tr>
-                        <?php while($fila=mysqli_fetch_assoc($res6)){?>
+                        <?php while($fila=mysqli_fetch_assoc($res4)){?>
                         <tr class="ponesacosahorrorosaahi">
                             
                             <td class="fotaza">
@@ -248,8 +252,8 @@
                                 <h4 class="font_11"><?php echo $fila["tipo"]?></h4>
                             </td>
                         </tr>
-                            <?php }}
-                        else if($tipo==19){?>
+                            <?php }
+                        case 19:?>
                     <table style="width: 100%;">
                         <tr id="cosinhas">
                                 <th class="font_4" >Icono</th>
@@ -261,7 +265,7 @@
                                 <th class="font_10" style="border-left: 1px solid goldenrod;">Pasiva</th>
                             
                         </tr>
-                        <?php while($fila=mysqli_fetch_assoc($res7)){?>
+                        <?php while($fila=mysqli_fetch_assoc($res4)){?>
                         <tr class="ponesacosahorrorosaahi">
                             
                             <td class="fotaza">
@@ -289,9 +293,9 @@
                                 <h4 class="font_11"><?php echo $fila["pasiva"]?></h4>
                             </td>
                         </tr>
-                            <?php }}
-                        else if($tipo==21){ 
-                            while($fila=mysqli_fetch_assoc($res8)){?>
+                            <?php }
+                        case 21:
+                            while($fila=mysqli_fetch_assoc($res4)){?>
                             <div class="listaza">
                                 <div class="fotazaL">
                                     <a class="fotonacitaL" href="../Items_pag/armas.php?tipo=<?php echo $tipo?>&tipo2=<?php echo $fila["codigo"]?>">
@@ -300,8 +304,8 @@
                                     </a>
                                 </div>
                                 </div>
-                            <?php }}
-                            else if($tipo==22){?>
+                            <?php }
+                            case 22:?>
                     <table style="width: 100%;">
                         <tr id="cosinhas">
                                 <th class="font_4" >Icono</th>
@@ -313,7 +317,7 @@
                                 <th class="font_10" style="border-left: 1px solid goldenrod;">Tipo</th>
                             
                         </tr>
-                        <?php while($fila=mysqli_fetch_assoc($res9)){?>
+                        <?php while($fila=mysqli_fetch_assoc($res4)){?>
                         <tr class="ponesacosahorrorosaahi">
                             
                             <td class="fotaza">
@@ -341,9 +345,9 @@
                                 <h4 class="font_11"><?php echo $fila["tipo"]?></h4>
                             </td>
                         </tr>
-                            <?php }}
-                            else if($tipo==5){ 
-                                while($fila=mysqli_fetch_assoc($res10)){?>
+                            <?php }
+                            case 5: 
+                                while($fila=mysqli_fetch_assoc($res4)){?>
                                 <div class="listaza">
                                     <div class="fotazaL">
                                         <a class="fotonacitaL" href="../Items_pag/armas.php?tipo=<?php echo $tipo?>&tipo2=<?php echo $fila["codigo"]?>">
@@ -352,20 +356,9 @@
                                         </a>
                                     </div>
                                     </div>
-                            <?php }}
-                            else if($tipo==6){ 
-                                while($fila=mysqli_fetch_assoc($res11)){?>
-                                <div class="listaza">
-                                    <div class="fotazaL">
-                                        <a class="fotonacitaL" href="../Items_pag/armas.php?tipo=<?php echo $tipo?>&tipo2=<?php echo $fila["codigo"]?>">
-                                            <img class="fotonaza" src=<?php echo $fila["imagen"]?> >
-                                            <h2 class="font_12"><?php echo $fila["nombre"]?></h2>
-                                        </a>
-                                    </div>
-                                </div>
-                            <?php }}
-                            else if($tipo==7){ 
-                                while($fila=mysqli_fetch_assoc($res12)){?>
+                            <?php }
+                            case 6:
+                                while($fila=mysqli_fetch_assoc($res4)){?>
                                 <div class="listaza">
                                     <div class="fotazaL">
                                         <a class="fotonacitaL" href="../Items_pag/armas.php?tipo=<?php echo $tipo?>&tipo2=<?php echo $fila["codigo"]?>">
@@ -374,9 +367,9 @@
                                         </a>
                                     </div>
                                 </div>
-                            <?php }}
-                            else if($tipo==8){ 
-                                while($fila=mysqli_fetch_assoc($res13)){?>
+                            <?php }
+                            case 7:
+                                while($fila=mysqli_fetch_assoc($res4)){?>
                                 <div class="listaza">
                                     <div class="fotazaL">
                                         <a class="fotonacitaL" href="../Items_pag/armas.php?tipo=<?php echo $tipo?>&tipo2=<?php echo $fila["codigo"]?>">
@@ -385,8 +378,19 @@
                                         </a>
                                     </div>
                                 </div>
-                            <?php }}
-                            else if($tipo==9){?>
+                            <?php }
+                            case 8:
+                                while($fila=mysqli_fetch_assoc($res4)){?>
+                                <div class="listaza">
+                                    <div class="fotazaL">
+                                        <a class="fotonacitaL" href="../Items_pag/armas.php?tipo=<?php echo $tipo?>&tipo2=<?php echo $fila["codigo"]?>">
+                                            <img class="fotonaza" src=<?php echo $fila["imagen"]?> >
+                                            <h2 class="font_12"><?php echo $fila["nombre"]?></h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            <?php }
+                            case 9:?>
                                 <table style="width: 100%;">
                                     <tr id="cosinhas">
                                             <th class="font_4" >Icono</th>
@@ -398,7 +402,7 @@
                                             <th class="font_10" style="border-left: 1px solid goldenrod;">Tipo</th>
                                         
                                     </tr>
-                                    <?php while($fila=mysqli_fetch_assoc($res14)){
+                                    <?php while($fila=mysqli_fetch_assoc($res4)){
                                         $codigo=$fila["codigo"]?>
                                     <tr class="ponesacosahorrorosaahi">
                                         
@@ -427,8 +431,8 @@
                                             <h4 class="font_11"><?php echo $fila["tipo"]?></h4>
                                         </td>
                                     </tr>
-                                        <?php }}
-                            else if($tipo==10){?>
+                                        <?php }
+                            case 10:?>
                                 <table style="width: 100%;">
                                     <tr id="cosinhas">
                                             <th class="font_4" >Icono</th>
@@ -440,7 +444,7 @@
                                             <th class="font_10" style="border-left: 1px solid goldenrod;">Tipo</th>
                                         
                                     </tr>
-                                    <?php while($fila=mysqli_fetch_assoc($res15)){
+                                    <?php while($fila=mysqli_fetch_assoc($res4)){
                                         $codigo=$fila["codigo"]?>
                                     <tr class="ponesacosahorrorosaahi">
                                         
@@ -469,8 +473,8 @@
                                             <h4 class="font_11"><?php echo $fila["tipo"]?></h4>
                                         </td>
                                     </tr>
-                                        <?php }}
-                            else if($tipo==11){?>
+                                        <?php }
+                            case 11:?>
                                 <table style="width: 100%;">
                                     <tr id="cosinhas">
                                             <th class="font_4" >Icono</th>
@@ -482,7 +486,7 @@
                                             <th class="font_10" style="border-left: 1px solid goldenrod;">Tipo</th>
                                         
                                     </tr>
-                                    <?php while($fila=mysqli_fetch_assoc($res16)){
+                                    <?php while($fila=mysqli_fetch_assoc($res4)){
                                         $codigo=$fila["codigo"]?>
                                     <tr class="ponesacosahorrorosaahi">
                                         
@@ -511,9 +515,9 @@
                                             <h4 class="font_11"><?php echo $fila["tipo"]?></h4>
                                         </td>
                                     </tr>
-                                        <?php }}
-                                        else if($tipo==13){ 
-                                            while($fila=mysqli_fetch_assoc($res17)){?>
+                                        <?php }
+                                        case 13:
+                                            while($fila=mysqli_fetch_assoc($res4)){?>
                                             <div class="listaza">
                                                 <div class="fotazaL">
                                                     <a class="fotonacitaL" href="../Items_pag/armas.php?tipo=<?php echo $tipo?>&tipo2=<?php echo $fila["codigo"]?>">
@@ -522,9 +526,9 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                        <?php }}
-                                        else if($tipo==14){ 
-                                            while($fila=mysqli_fetch_assoc($res18)){?>
+                                        <?php }
+                                        case 14: 
+                                            while($fila=mysqli_fetch_assoc($res4)){?>
                                             <div class="listaza">
                                                 <div class="fotazaL">
                                                     <a class="fotonacitaL" href="../Items_pag/armas.php?tipo=<?php echo $tipo?>&tipo2=<?php echo $fila["codigo"]?>">
@@ -533,9 +537,9 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                        <?php }}
-                                        else if($tipo==15){ 
-                                            while($fila=mysqli_fetch_assoc($res19)){?>
+                                        <?php }
+                                        case 15:
+                                            while($fila=mysqli_fetch_assoc($res4)){?>
                                             <div class="listaza">
                                                 <div class="fotazaL">
                                                     <a class="fotonacitaL" href="../Items_pag/armas.php?tipo=<?php echo $tipo?>&tipo2=<?php echo $fila["codigo"]?>">
@@ -544,9 +548,9 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                        <?php }}
-                                        else if($tipo==16){ 
-                                            while($fila=mysqli_fetch_assoc($res20)){?>
+                                        <?php }
+                                        case 16:
+                                            while($fila=mysqli_fetch_assoc($res4)){?>
                                             <div class="listaza">
                                                 <div class="fotazaL">
                                                     <a class="fotonacitaL" href="../Items_pag/armas.php?tipo=<?php echo $tipo?>&tipo2=<?php echo $fila["codigo"]?>">
